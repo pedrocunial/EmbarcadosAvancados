@@ -1,0 +1,370 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition"
+
+// DATE "08/13/2018 14:25:19"
+
+// 
+// Device: Altera 5CSEBA6U23I7 Package UFBGA672
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module topLevel (
+	fpga_clk_50,
+	fpga_led_pio,
+	KEY,
+	switch);
+input 	fpga_clk_50;
+output 	[5:0] fpga_led_pio;
+input 	[3:0] KEY;
+input 	[3:0] switch;
+
+// Design Ports Information
+// fpga_led_pio[0]	=>  Location: PIN_W15,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
+// fpga_led_pio[1]	=>  Location: PIN_AA24,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
+// fpga_led_pio[2]	=>  Location: PIN_V16,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
+// fpga_led_pio[3]	=>  Location: PIN_V15,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
+// fpga_led_pio[4]	=>  Location: PIN_AF26,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
+// fpga_led_pio[5]	=>  Location: PIN_AE26,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
+// KEY[1]	=>  Location: PIN_V12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// KEY[2]	=>  Location: PIN_D8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// KEY[3]	=>  Location: PIN_AF21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// switch[3]	=>  Location: PIN_AG21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// switch[2]	=>  Location: PIN_AD23,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// switch[1]	=>  Location: PIN_AF15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// switch[0]	=>  Location: PIN_AH16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// fpga_clk_50	=>  Location: PIN_V11,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: Default
+// KEY[0]	=>  Location: PIN_AE11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \KEY[1]~input_o ;
+wire \KEY[2]~input_o ;
+wire \KEY[3]~input_o ;
+wire \switch[3]~input_o ;
+wire \switch[2]~input_o ;
+wire \switch[1]~input_o ;
+wire \switch[0]~input_o ;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \fpga_clk_50~input_o ;
+wire \blink~0_combout ;
+wire \blink~feeder_combout ;
+wire \KEY[0]~input_o ;
+wire \blink~q ;
+
+
+// Location: IOOBUF_X89_Y8_N22
+cyclonev_io_obuf \fpga_led_pio[0]~output (
+	.i(\blink~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(fpga_led_pio[0]),
+	.obar());
+// synopsys translate_off
+defparam \fpga_led_pio[0]~output .bus_hold = "false";
+defparam \fpga_led_pio[0]~output .open_drain_output = "false";
+defparam \fpga_led_pio[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N39
+cyclonev_io_obuf \fpga_led_pio[1]~output (
+	.i(\blink~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(fpga_led_pio[1]),
+	.obar());
+// synopsys translate_off
+defparam \fpga_led_pio[1]~output .bus_hold = "false";
+defparam \fpga_led_pio[1]~output .open_drain_output = "false";
+defparam \fpga_led_pio[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N5
+cyclonev_io_obuf \fpga_led_pio[2]~output (
+	.i(\blink~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(fpga_led_pio[2]),
+	.obar());
+// synopsys translate_off
+defparam \fpga_led_pio[2]~output .bus_hold = "false";
+defparam \fpga_led_pio[2]~output .open_drain_output = "false";
+defparam \fpga_led_pio[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N22
+cyclonev_io_obuf \fpga_led_pio[3]~output (
+	.i(\blink~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(fpga_led_pio[3]),
+	.obar());
+// synopsys translate_off
+defparam \fpga_led_pio[3]~output .bus_hold = "false";
+defparam \fpga_led_pio[3]~output .open_drain_output = "false";
+defparam \fpga_led_pio[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y4_N79
+cyclonev_io_obuf \fpga_led_pio[4]~output (
+	.i(\blink~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(fpga_led_pio[4]),
+	.obar());
+// synopsys translate_off
+defparam \fpga_led_pio[4]~output .bus_hold = "false";
+defparam \fpga_led_pio[4]~output .open_drain_output = "false";
+defparam \fpga_led_pio[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y4_N96
+cyclonev_io_obuf \fpga_led_pio[5]~output (
+	.i(\blink~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(fpga_led_pio[5]),
+	.obar());
+// synopsys translate_off
+defparam \fpga_led_pio[5]~output .bus_hold = "false";
+defparam \fpga_led_pio[5]~output .open_drain_output = "false";
+defparam \fpga_led_pio[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X32_Y0_N1
+cyclonev_io_ibuf \fpga_clk_50~input (
+	.i(fpga_clk_50),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\fpga_clk_50~input_o ));
+// synopsys translate_off
+defparam \fpga_clk_50~input .bus_hold = "false";
+defparam \fpga_clk_50~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X31_Y1_N39
+cyclonev_lcell_comb \blink~0 (
+// Equation(s):
+// \blink~0_combout  = ( !\blink~q  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\blink~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\blink~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \blink~0 .extended_lut = "off";
+defparam \blink~0 .lut_mask = 64'hFFFFFFFF00000000;
+defparam \blink~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X31_Y1_N30
+cyclonev_lcell_comb \blink~feeder (
+// Equation(s):
+// \blink~feeder_combout  = ( \blink~0_combout  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\blink~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\blink~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \blink~feeder .extended_lut = "off";
+defparam \blink~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \blink~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X30_Y0_N18
+cyclonev_io_ibuf \KEY[0]~input (
+	.i(KEY[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[0]~input_o ));
+// synopsys translate_off
+defparam \KEY[0]~input .bus_hold = "false";
+defparam \KEY[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: FF_X31_Y1_N31
+dffeas blink(
+	.clk(\fpga_clk_50~input_o ),
+	.d(\blink~feeder_combout ),
+	.asdata(vcc),
+	.clrn(\KEY[0]~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\blink~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam blink.is_wysiwyg = "true";
+defparam blink.power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X40_Y0_N1
+cyclonev_io_ibuf \KEY[1]~input (
+	.i(KEY[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[1]~input_o ));
+// synopsys translate_off
+defparam \KEY[1]~input .bus_hold = "false";
+defparam \KEY[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X38_Y81_N52
+cyclonev_io_ibuf \KEY[2]~input (
+	.i(KEY[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[2]~input_o ));
+// synopsys translate_off
+defparam \KEY[2]~input .bus_hold = "false";
+defparam \KEY[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X74_Y0_N58
+cyclonev_io_ibuf \KEY[3]~input (
+	.i(KEY[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[3]~input_o ));
+// synopsys translate_off
+defparam \KEY[3]~input .bus_hold = "false";
+defparam \KEY[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X74_Y0_N75
+cyclonev_io_ibuf \switch[3]~input (
+	.i(switch[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\switch[3]~input_o ));
+// synopsys translate_off
+defparam \switch[3]~input .bus_hold = "false";
+defparam \switch[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X76_Y0_N1
+cyclonev_io_ibuf \switch[2]~input (
+	.i(switch[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\switch[2]~input_o ));
+// synopsys translate_off
+defparam \switch[2]~input .bus_hold = "false";
+defparam \switch[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y0_N1
+cyclonev_io_ibuf \switch[1]~input (
+	.i(switch[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\switch[1]~input_o ));
+// synopsys translate_off
+defparam \switch[1]~input .bus_hold = "false";
+defparam \switch[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X64_Y0_N52
+cyclonev_io_ibuf \switch[0]~input (
+	.i(switch[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\switch[0]~input_o ));
+// synopsys translate_off
+defparam \switch[0]~input .bus_hold = "false";
+defparam \switch[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X59_Y7_N3
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule
