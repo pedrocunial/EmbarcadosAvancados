@@ -1,5 +1,5 @@
 Analysis & Synthesis report for aula01
-Mon Aug 13 14:24:21 2018
+Tue Aug 14 07:50:43 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -44,14 +44,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 13 14:24:21 2018           ;
+; Analysis & Synthesis Status     ; Successful - Tue Aug 14 07:50:43 2018           ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                   ; aula01                                          ;
 ; Top-level Entity Name           ; topLevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 1                                               ;
-; Total pins                      ; 15                                              ;
+; Total pins                      ; 12                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -193,14 +193,14 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 1     ;
 ;                                             ;       ;
-; I/O pins                                    ; 15    ;
+; I/O pins                                    ; 12    ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; blink ;
 ; Maximum fan-out                             ; 7     ;
-; Total fan-out                               ; 25    ;
-; Average fan-out                             ; 0.78  ;
+; Total fan-out                               ; 22    ;
+; Average fan-out                             ; 0.85  ;
 +---------------------------------------------+-------+
 
 
@@ -209,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |topLevel                  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 15   ; 0            ; |topLevel           ; topLevel    ; work         ;
+; |topLevel                  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 12   ; 0            ; |topLevel           ; topLevel    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -261,7 +261,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
 ;         1 data inputs ; 1                           ;
-; boundary_port         ; 15                          ;
+; boundary_port         ; 12                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
 ; Average LUT depth     ; 0.50                        ;
@@ -283,7 +283,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Mon Aug 13 14:24:12 2018
+    Info: Processing started: Tue Aug 14 07:50:31 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off aula01 -c aula01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -291,31 +291,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file topLeve
     Info (12022): Found design unit 1: topLevel-rtl File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 24
     Info (12023): Found entity 1: topLevel File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 5
 Info (12127): Elaborating entity "topLevel" for the top level hierarchy
-Warning (10542): VHDL Variable Declaration warning at topLevel.vhd(34): used initial value expression for variable "limit" because variable was never assigned a value File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 34
-Warning (10542): VHDL Variable Declaration warning at topLevel.vhd(35): used initial value expression for variable "div" because variable was never assigned a value File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at topLevel.vhd(35): signal "switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at topLevel.vhd(37): signal "KEY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at topLevel.vhd(38): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 38
+Warning (10542): VHDL Variable Declaration warning at topLevel.vhd(33): used initial value expression for variable "limit" because variable was never assigned a value File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 33
+Warning (10542): VHDL Variable Declaration warning at topLevel.vhd(34): used initial value expression for variable "div" because variable was never assigned a value File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at topLevel.vhd(34): signal "switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at topLevel.vhd(36): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 36
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 25 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 18
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 18
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 18
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "switch[3]" File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 19
     Warning (15610): No output dependent on input pin "switch[2]" File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 19
     Warning (15610): No output dependent on input pin "switch[1]" File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 19
     Warning (15610): No output dependent on input pin "switch[0]" File: /home/parallels/Documents/embava/aula01/topLevel.vhd Line: 19
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
+Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 6 output pins
     Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 1035 megabytes
-    Info: Processing ended: Mon Aug 13 14:24:21 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 1036 megabytes
+    Info: Processing ended: Tue Aug 14 07:50:43 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:16
 
 

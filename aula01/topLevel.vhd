@@ -15,7 +15,7 @@ entity topLevel is
 		  
         -- I/Os
         fpga_led_pio       : out std_logic_vector(5 downto 0);
-		  KEY                : in std_logic_vector(3 downto 0) := (others=>'1') ;   -- KEY0
+		  enable             : in std_logic := '1';
 		  switch             : in std_logic_vector(3 downto 0)
 		  
 	);
@@ -25,7 +25,6 @@ architecture rtl of topLevel is
 
 -- signal
 signal blink : std_logic := '0';
-signal enable : std_logic;
 
 begin
 
@@ -34,7 +33,6 @@ begin
 		variable limit   : integer range 0 to max_freq := max_freq;
 		variable div     : integer := to_integer(unsigned(switch));
 		begin
-			enable <= KEY(0);
 			if (enable = '1') then
 			  if (rising_edge(fpga_clk_50)) then
 				if (counter < shift_right(to_unsigned(limit, int_size), div)) then
