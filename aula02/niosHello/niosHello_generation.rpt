@@ -1,5 +1,5 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/parallels/Documents/embava/aula02/niosHello.qsys --block-symbol-file --output-directory=/home/parallels/Documents/embava/aula02/niosHello --family="Cyclone V" --part=5CGXFC7C6F23I7
+Info: qsys-generate /home/parallels/Documents/embava/aula02/niosHello.qsys --block-symbol-file --output-directory=/home/parallels/Documents/embava/aula02/niosHello --family="Cyclone V" --part=5CSEBA6U23I7
 Progress: Loading aula02/niosHello.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 18.0]
@@ -22,7 +22,7 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/parallels/Documents/embava/aula02/niosHello.qsys --synthesis=VHDL --output-directory=/home/parallels/Documents/embava/aula02/niosHello/synthesis --family="Cyclone V" --part=5CGXFC7C6F23I7
+Info: qsys-generate /home/parallels/Documents/embava/aula02/niosHello.qsys --synthesis=VHDL --output-directory=/home/parallels/Documents/embava/aula02/niosHello/synthesis --family="Cyclone V" --part=5CSEBA6U23I7
 Progress: Loading aula02/niosHello.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 18.0]
@@ -43,16 +43,16 @@ Info: niosHello.jtag_uart_0: JTAG UART IP input clock need to be at least double
 Warning: niosHello.jtag_uart_0: Interrupt sender jtag_uart_0.irq is not connected to an interrupt receiver
 Info: niosHello: Generating niosHello "niosHello" for QUARTUS_SYNTH
 Info: jtag_uart_0: Starting RTL generation for module 'niosHello_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=niosHello_jtag_uart_0 --dir=/tmp/alt7757_1126924719402772422.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/parallels/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt7757_1126924719402772422.dir/0002_jtag_uart_0_gen//niosHello_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=niosHello_jtag_uart_0 --dir=/tmp/alt7757_1515294353222033605.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/parallels/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt7757_1515294353222033605.dir/0002_jtag_uart_0_gen//niosHello_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'niosHello_jtag_uart_0'
 Info: jtag_uart_0: "niosHello" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "niosHello" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'niosHello_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=niosHello_onchip_memory2_0 --dir=/tmp/alt7757_1126924719402772422.dir/0003_onchip_memory2_0_gen/ --quartus_dir=/home/parallels/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt7757_1126924719402772422.dir/0003_onchip_memory2_0_gen//niosHello_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=niosHello_onchip_memory2_0 --dir=/tmp/alt7757_1515294353222033605.dir/0003_onchip_memory2_0_gen/ --quartus_dir=/home/parallels/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt7757_1515294353222033605.dir/0003_onchip_memory2_0_gen//niosHello_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'niosHello_onchip_memory2_0'
 Info: onchip_memory2_0: "niosHello" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: pio_0: Starting RTL generation for module 'niosHello_pio_0'
-Info: pio_0:   Generation command is [exec /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=niosHello_pio_0 --dir=/tmp/alt7757_1126924719402772422.dir/0004_pio_0_gen/ --quartus_dir=/home/parallels/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt7757_1126924719402772422.dir/0004_pio_0_gen//niosHello_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0:   Generation command is [exec /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/parallels/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=niosHello_pio_0 --dir=/tmp/alt7757_1515294353222033605.dir/0004_pio_0_gen/ --quartus_dir=/home/parallels/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt7757_1515294353222033605.dir/0004_pio_0_gen//niosHello_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_0: Done RTL generation for module 'niosHello_pio_0'
 Info: pio_0: "niosHello" instantiated altera_avalon_pio "pio_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -63,16 +63,16 @@ Info: mm_interconnect_0: "niosHello" instantiated altera_mm_interconnect "mm_int
 Info: irq_mapper: "niosHello" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "niosHello" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'niosHello_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec /home/parallels/intelFPGA_lite/18.0/quartus/linux64//eperlcmd -I /home/parallels/intelFPGA_lite/18.0/quartus/linux64//perl/lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=niosHello_nios2_gen2_0_cpu --dir=/tmp/alt7757_1126924719402772422.dir/0007_cpu_gen/ --quartus_bindir=/home/parallels/intelFPGA_lite/18.0/quartus/linux64/ --verilog --config=/tmp/alt7757_1126924719402772422.dir/0007_cpu_gen//niosHello_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2018.08.14 08:38:20 (*) Starting Nios II generation
-Info: cpu: # 2018.08.14 08:38:20 (*)   Checking for plaintext license.
-Info: cpu: # 2018.08.14 08:38:21 (*)   Plaintext license not found.
-Info: cpu: # 2018.08.14 08:38:21 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2018.08.14 08:38:21 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2018.08.14 08:38:21 (*)   Creating all objects for CPU
-Info: cpu: # 2018.08.14 08:38:22 (*)   Generating RTL from CPU objects
-Info: cpu: # 2018.08.14 08:38:22 (*)   Creating plain-text RTL
-Info: cpu: # 2018.08.14 08:38:22 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/parallels/intelFPGA_lite/18.0/quartus/linux64//eperlcmd -I /home/parallels/intelFPGA_lite/18.0/quartus/linux64//perl/lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/parallels/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=niosHello_nios2_gen2_0_cpu --dir=/tmp/alt7757_1515294353222033605.dir/0007_cpu_gen/ --quartus_bindir=/home/parallels/intelFPGA_lite/18.0/quartus/linux64/ --verilog --config=/tmp/alt7757_1515294353222033605.dir/0007_cpu_gen//niosHello_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2018.08.14 09:33:07 (*) Starting Nios II generation
+Info: cpu: # 2018.08.14 09:33:07 (*)   Checking for plaintext license.
+Info: cpu: # 2018.08.14 09:33:07 (*)   Plaintext license not found.
+Info: cpu: # 2018.08.14 09:33:07 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2018.08.14 09:33:07 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.08.14 09:33:07 (*)   Creating all objects for CPU
+Info: cpu: # 2018.08.14 09:33:08 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.08.14 09:33:08 (*)   Creating plain-text RTL
+Info: cpu: # 2018.08.14 09:33:09 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'niosHello_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"

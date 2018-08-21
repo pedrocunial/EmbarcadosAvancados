@@ -25,13 +25,27 @@ fpga_clk_50 => counter[21].CLK
 fpga_clk_50 => counter[22].CLK
 fpga_clk_50 => counter[23].CLK
 fpga_clk_50 => counter[24].CLK
-fpga_led_pio[0] << blink.DB_MAX_OUTPUT_PORT_TYPE
-fpga_led_pio[1] << blink.DB_MAX_OUTPUT_PORT_TYPE
-fpga_led_pio[2] << blink.DB_MAX_OUTPUT_PORT_TYPE
-fpga_led_pio[3] << blink.DB_MAX_OUTPUT_PORT_TYPE
-fpga_led_pio[4] << blink.DB_MAX_OUTPUT_PORT_TYPE
-fpga_led_pio[5] << blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_clk_50 => counter[25].CLK
+fpga_clk_50 => counter[26].CLK
+fpga_clk_50 => counter[27].CLK
+fpga_clk_50 => counter[28].CLK
+fpga_clk_50 => counter[29].CLK
+fpga_clk_50 => counter[30].CLK
+fpga_clk_50 => counter[31].CLK
+fpga_led_pio[0] <= blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[1] <= blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[2] <= blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[3] <= blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[4] <= blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[5] <= blink.DB_MAX_OUTPUT_PORT_TYPE
 enable => blink.ACLR
+enable => counter[31].ENA
+enable => counter[30].ENA
+enable => counter[29].ENA
+enable => counter[28].ENA
+enable => counter[27].ENA
+enable => counter[26].ENA
+enable => counter[25].ENA
 enable => counter[24].ENA
 enable => counter[23].ENA
 enable => counter[22].ENA
@@ -57,9 +71,9 @@ enable => counter[3].ENA
 enable => counter[2].ENA
 enable => counter[1].ENA
 enable => counter[0].ENA
-switch[0] => ShiftRight0.IN8
-switch[1] => ShiftRight0.IN7
-switch[2] => ShiftRight0.IN6
-switch[3] => ShiftRight0.IN5
+switch[0] => ShiftRight0.IN36
+switch[1] => ShiftRight0.IN35
+switch[2] => ShiftRight0.IN34
+switch[3] => ShiftRight0.IN33
 
 

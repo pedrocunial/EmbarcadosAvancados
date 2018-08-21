@@ -5,8 +5,8 @@ use IEEE.numeric_std.ALL;  -- https://www.xilinx.com/support/answers/45213.html
 entity topLevel is
     generic (
 		max_freq : integer := 10000000;
-		max_counter : integer := 25000000;
-		int_size : integer := 4
+		max_counter : integer := 10000000;
+		int_size : integer := 32
 	 );
 
     port (
@@ -29,8 +29,8 @@ signal blink : std_logic := '0';
 begin
 
   process(fpga_clk_50) 
-      variable counter : integer range 0 to max_counter := 0;
-		variable limit   : integer range 0 to max_freq := max_freq;
+      variable counter : integer := 0;
+		variable limit   : integer := max_freq;
 		variable div     : integer := to_integer(unsigned(switch));
 		begin
 			if (enable = '1') then

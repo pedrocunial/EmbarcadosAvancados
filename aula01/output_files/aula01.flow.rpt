@@ -1,5 +1,5 @@
 Flow report for aula01
-Tue Aug 14 07:51:34 2018
+Tue Aug 21 08:23:15 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Aug 14 07:51:34 2018           ;
+; Flow Status                     ; Successful - Tue Aug 21 08:23:15 2018           ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                   ; aula01                                          ;
 ; Top-level Entity Name           ; topLevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEBA6U23I7                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 1 / 41,910 ( < 1 % )                            ;
-; Total registers                 ; 1                                               ;
+; Logic utilization (in ALMs)     ; 55 / 41,910 ( < 1 % )                           ;
+; Total registers                 ; 33                                              ;
 ; Total pins                      ; 12 / 314 ( 4 % )                                ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/14/2018 07:50:32 ;
+; Start date & time ; 08/21/2018 08:22:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; aula01              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 121367168331.153424383205576           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 121367168331.153485052507018           ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -97,12 +97,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 1029 MB             ; 00:00:16                           ;
-; Fitter               ; 00:00:34     ; 1.0                     ; 2136 MB             ; 00:00:42                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 977 MB              ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 1207 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1136 MB             ; 00:00:01                           ;
-; Total                ; 00:00:57     ; --                      ; --                  ; 00:01:09                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 1031 MB             ; 00:00:17                           ;
+; Fitter               ; 00:00:41     ; 1.0                     ; 2160 MB             ; 00:00:50                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 977 MB              ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 1217 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1139 MB             ; 00:00:01                           ;
+; Total                ; 00:01:09     ; --                      ; --                  ; 00:01:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

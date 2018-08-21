@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity topLevel is
+--entity topLevel is
     port (
         -- Gloabals
         fpga_clk_50        : in  std_logic;             -- clock.clk
