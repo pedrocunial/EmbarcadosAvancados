@@ -5,11 +5,12 @@
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
+   <name preferredWidth="186" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library,Library/Basic Functions,Library/Processors and Peripherals/Co-Processors,Library/Processors and Peripherals/Embedded Processors,Library/Processors and Peripherals,Project,Library/Basic Functions/Simulation; Debug and Verification,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Processors and Peripherals/Co-Processors/Nios II Custom Instructions" />
- <window width="1375" height="768" x="65" y="24" />
+   expandedCategories="Project,Library/Basic Functions/On Chip Memory,Library/Memory Interfaces and Controllers/SDRAM,Library/DSP,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Basic Functions,Library/University Program/Memory,Library/University Program,Library/University Program/Clock,Library,Library/Memory Interfaces and Controllers/Memory Interfaces with ALTMEMPHY,Library/Memory Interfaces and Controllers,Library/DSP/Video and Image Processing" />
+ <window width="1375" height="768" x="0" y="98" />
  <generation synthesis="VHDL" />
  <hdlexample language="VHDL" />
 </preferences>

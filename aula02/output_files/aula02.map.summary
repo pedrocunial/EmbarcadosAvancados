@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Aug 14 09:18:42 2018
-Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Analysis & Synthesis Status : Successful - Tue Sep  4 07:45:32 2018
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : aula02
 Top-level Entity Name : topLevel
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 895
-Total pins : 7
+Total registers : 953
+Total pins : 12
 Total virtual pins : 0
-Total block memory bits : 273,408
+Total block memory bits : 2,065,408
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

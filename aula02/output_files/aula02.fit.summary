@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Aug 14 09:21:08 2018
-Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Fitter Status : Successful - Tue Sep  4 07:47:12 2018
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : aula02
 Top-level Entity Name : topLevel
 Family : Cyclone V
 Device : 5CSEBA6U23I7
 Timing Models : Final
-Logic utilization (in ALMs) : 701 / 41,910 ( 2 % )
-Total registers : 944
-Total pins : 7 / 314 ( 2 % )
+Logic utilization (in ALMs) : 818 / 41,910 ( 2 % )
+Total registers : 1019
+Total pins : 12 / 314 ( 4 % )
 Total virtual pins : 0
-Total block memory bits : 273,408 / 5,662,720 ( 5 % )
-Total RAM Blocks : 37 / 553 ( 7 % )
+Total block memory bits : 2,065,408 / 5,662,720 ( 36 % )
+Total RAM Blocks : 261 / 553 ( 47 % )
 Total DSP Blocks : 0 / 112 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

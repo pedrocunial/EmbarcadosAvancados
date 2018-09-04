@@ -30,6 +30,26 @@
 				{
 					"name" : "fpga_clk_50",
 					"strict" : false
+				},
+				{
+					"name" : "fpga_but_pio[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_but_pio[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_but_pio[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_but_pio[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_but_pio[2]",
+					"strict" : false
 				}
 			]
 		}
