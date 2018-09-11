@@ -18,7 +18,12 @@
 #include "system.h"
 #include <alt_types.h>
 #include <io.h> /* Leiutura e escrita no Avalon */
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
 
+char blink = 0;
+volatile int *edge_capture;
+volatile int *prev_state;
 
 
   /*******************************************************************
@@ -41,9 +46,15 @@ void handle_button_interrupts(void* context, alt_u32 id)
     volatile int* edge_capture_ptr = (volatile int*) context;
     /* Store the value in the Button's edge capture register in *context. */
     *edge_capture_ptr = IORD_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE);
-    n++;
     /* Reset the Button's edge capture register. */
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE, 0);
+    if (*edge_capture_ptr == 1) {
+    	blink = 0;
+    } else if (*prev_state != *edge_capture_ptr) {
+    	blink = 1;
+    }
+    *prev_state = *edge_capture_ptr;
+
 }
 void init_pio()
 {
@@ -55,23 +66,31 @@ void init_pio()
     /* Reset the edge capture register. */
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE, 0x0);
     /* Register the interrupt handler. */
-    alt_irq_register( PIO_IRQ, edge_capture_ptr,
+    alt_irq_register( PIO_1_IRQ, edge_capture_ptr,
                       handle_button_interrupts );
 }
 
 
 int main(void){
   unsigned int led = 0;
+  *prev_state = 0;
 
   printf("Embarcados++ \n");
   init_pio();
   while(1){
-	  if (led <= 5){
-		  IOWR_32DIRECT(PIO_0_BASE, 0, 0x01 << led++);
-		  usleep(50000);
-	  }
-	  else{
-		  led = 0;
+	  if (blink) {
+		  if (led <= 5){
+			  IOWR_32DIRECT(PIO_0_BASE, 0, 0x01 << led++);
+			  usleep(50000 >> *prev_state);
+			  printf("prev_state: %d\n", *prev_state);
+//			  printf("blink: %d\n", blink);
+		  }
+		  else{
+			  led = 0;
+		  }
+
+	  } else {
+		  *prev_state = 0;
 	  }
   };
 

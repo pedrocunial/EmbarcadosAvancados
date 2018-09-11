@@ -237,3 +237,120 @@ Binding(F4,
 
 !ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:06:24.403
 !MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:16:31.401
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:16:51.571
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:16:53.113
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:18:17.412
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:18:17.563
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:18:19.027
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:20:30.697
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:20:30.874
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:20:32.195
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:24:09.699
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:24:10.689
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:24:12.421
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:43:02.932
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:43:03.200
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:43:04.670
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:43:36.429
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:43:36.679
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:43:38.161
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:46:20.719
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:46:40.880
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:46:42.287
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:47:42.979
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:48:03.134
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:48:04.600
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:48:41.578
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:49:01.753
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:49:03.133
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:49:42.227
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:50:02.387
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:50:03.800
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:50:30.893
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:51:11.079
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:51:12.452
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:53:25.066
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:53:45.239
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:53:46.599
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:54:22.187
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:54:42.366
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-09-11 04:54:43.791
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02/aula02.elf]
