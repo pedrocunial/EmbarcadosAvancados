@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for aula02
-Tue Sep  4 07:47:42 2018
+Tue Sep 11 07:47:12 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -111,8 +111,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                 ; Status ; Read at                  ;
 +---------------------------------------------------------------+--------+--------------------------+
-; niosHello/synthesis/submodules/altera_reset_controller.sdc    ; OK     ; Tue Sep  4 07:47:27 2018 ;
-; niosHello/synthesis/submodules/niosHello_nios2_gen2_0_cpu.sdc ; OK     ; Tue Sep  4 07:47:27 2018 ;
+; niosHello/synthesis/submodules/altera_reset_controller.sdc    ; OK     ; Tue Sep 11 07:46:57 2018 ;
+; niosHello/synthesis/submodules/niosHello_nios2_gen2_0_cpu.sdc ; OK     ; Tue Sep 11 07:46:57 2018 ;
 +---------------------------------------------------------------+--------+--------------------------+
 
 
@@ -649,7 +649,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Tue Sep  4 07:47:25 2018
+    Info: Processing started: Tue Sep 11 07:46:55 2018
 Info: Command: quartus_sta aula02 -c aula02
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -849,8 +849,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 1595 megabytes
-    Info: Processing ended: Tue Sep  4 07:47:42 2018
+    Info: Processing ended: Tue Sep 11 07:47:12 2018
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:17
 
 

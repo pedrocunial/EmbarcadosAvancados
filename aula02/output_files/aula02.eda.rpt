@@ -1,5 +1,5 @@
 EDA Netlist Writer report for aula02
-Tue Sep  4 07:47:46 2018
+Tue Sep 11 07:47:15 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Sep  4 07:47:46 2018 ;
+; EDA Netlist Writer Status ; Successful - Tue Sep 11 07:47:15 2018 ;
 ; Revision Name             ; aula02                                ;
 ; Top-level Entity Name     ; topLevel                              ;
 ; Family                    ; Cyclone V                             ;
@@ -67,13 +67,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Simulation Generated Files                                            ;
-+-----------------------------------------------------------------------+
-; Generated Files                                                       ;
-+-----------------------------------------------------------------------+
-; /home/parallels/Documents/embava/aula02/simulation/modelsim/aula02.vo ;
-+-----------------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                         ;
++------------------------------------------------------------------------------------+
+; Generated Files                                                                    ;
++------------------------------------------------------------------------------------+
+; /home/parallels/Documents/EmbarcadosAvancados/aula02/simulation/modelsim/aula02.vo ;
++------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -82,14 +82,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Tue Sep  4 07:47:43 2018
+    Info: Processing started: Tue Sep 11 07:47:13 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off aula02 -c aula02
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
-Info (204019): Generated file aula02.vo in folder "/home/parallels/Documents/embava/aula02/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file aula02.vo in folder "/home/parallels/Documents/EmbarcadosAvancados/aula02/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1445 megabytes
-    Info: Processing ended: Tue Sep  4 07:47:46 2018
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 1443 megabytes
+    Info: Processing ended: Tue Sep 11 07:47:15 2018
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
 
