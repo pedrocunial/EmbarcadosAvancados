@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.altera.sbtgui.launch.modelsim.Nios2ModelsimLaunchConfiguration">
+<stringAttribute key="elfFile" value="/home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/Aula03/RUN_ON_HDL_SIMULATOR_ONLY_Aula03.elf"/>
+<stringAttribute key="modelSimPath" value="/linuxaloem"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="RUN_ON_HDL_SIMULATOR_ONLY_Aula03.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Aula03"/>
+<stringAttribute key="spdPath" value="/home/parallels/Documents/EmbarcadosAvancados/aula03_1/niosHello_tb.spd"/>
+</launchConfiguration>

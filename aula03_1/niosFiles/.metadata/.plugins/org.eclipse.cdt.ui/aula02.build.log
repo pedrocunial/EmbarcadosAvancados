@@ -1,0 +1,26 @@
+04:54:21 **** Incremental Build of configuration Nios II for project aula02 ****
+make all 
+Info: Building ../aula02_bsp/
+make --no-print-directory -C ../aula02_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../aula02_bsp//HAL/inc -I../aula02_bsp/ -I../aula02_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'init_pio':
+hello_world.c:69:5: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+     alt_irq_register( PIO_1_IRQ, edge_capture_ptr,
+     ^
+hello_world.c: In function 'main':
+hello_world.c:84:6: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+      usleep(50000 >> *prev_state);
+      ^
+Info: Linking aula02.elf
+nios2-elf-g++  -T'../aula02_bsp//linker.x' -msys-crt0='../aula02_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../aula02_bsp/   -Wl,-Map=aula02.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o aula02.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert aula02.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula02" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula02/software/aula02_bsp/../../niosHello.sopcinfo
+Info: (aula02.elf) 71 KBytes program size (code + initialized data).
+Info:              117 KBytes free for stack + heap.
+Info: Creating aula02.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source aula02.elf >aula02.objdump
+[aula02 build complete]
+
+04:54:21 Build Finished (took 738ms)
+

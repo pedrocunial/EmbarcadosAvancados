@@ -1,0 +1,9 @@
+05:25:48 **** Incremental Build of configuration Nios II for project Aula03 ****
+make all 
+Info: Building ../Aula03_bsp/
+make --no-print-directory -C ../Aula03_bsp/
+[BSP build complete]
+[RUN_ON_HDL_SIMULATOR_ONLY_Aula03 build complete]
+
+05:25:49 Build Finished (took 199ms)
+
