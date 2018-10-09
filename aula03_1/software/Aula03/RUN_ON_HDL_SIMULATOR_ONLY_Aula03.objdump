@@ -297,9 +297,9 @@ int main(void){
    20084:	2084983a 	sll	r2,r4,r2
    20088:	18800015 	stw	r2,0(r3)
 #ifndef SIM
-          usleep(500000); // remover durante a simulação
-   2008c:	01000234 	movhi	r4,8
-   20090:	21284804 	addi	r4,r4,-24288
+          usleep(50000000); // remover durante a simulação
+   2008c:	0100bef4 	movhi	r4,763
+   20090:	213c2004 	addi	r4,r4,-3968
    20094:	00203b00 	call	203b0 <usleep>
    20098:	003ff106 	br	20060 <main+0x24>
 #endif

@@ -1,9 +1,22 @@
-05:25:48 **** Incremental Build of configuration Nios II for project Aula03 ****
+04:08:50 **** Incremental Build of configuration Nios II for project Aula03 ****
 make all 
 Info: Building ../Aula03_bsp/
 make --no-print-directory -C ../Aula03_bsp/
 [BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Aula03_bsp//HAL/inc -I../Aula03_bsp/ -I../Aula03_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DALT_SIM_OPTIMIZE -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:39:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(50000000); // remover durante a simulação
+           ^
+Info: Linking RUN_ON_HDL_SIMULATOR_ONLY_Aula03.elf
+nios2-elf-g++  -T'../Aula03_bsp//linker.x' -msys-crt0='../Aula03_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Aula03_bsp/  -msmallc  -Wl,-Map=RUN_ON_HDL_SIMULATOR_ONLY_Aula03.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o RUN_ON_HDL_SIMULATOR_ONLY_Aula03.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert RUN_ON_HDL_SIMULATOR_ONLY_Aula03.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/Aula03_bsp/../../niosHello.sopcinfo
+Info: (RUN_ON_HDL_SIMULATOR_ONLY_Aula03.elf) 4792 Bytes program size (code + initialized data).
+Info:                                        124 KBytes free for stack + heap.
+Info: Creating RUN_ON_HDL_SIMULATOR_ONLY_Aula03.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source RUN_ON_HDL_SIMULATOR_ONLY_Aula03.elf >RUN_ON_HDL_SIMULATOR_ONLY_Aula03.objdump
 [RUN_ON_HDL_SIMULATOR_ONLY_Aula03 build complete]
 
-05:25:49 Build Finished (took 199ms)
+04:08:50 Build Finished (took 456ms)
 
