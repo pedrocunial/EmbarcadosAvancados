@@ -10,12 +10,16 @@ entity peripheral_LED is
     );
     port (
         -- Gloabals
-        clk                : in  std_logic                     := '0';
-        reset              : in  std_logic                     := '0';
+        clk             : in  std_logic                     := '0';
+        reset           : in  std_logic                     := '0';
 
         -- I/Os
-        LEDs               : out std_logic_vector(LEN - 1 downto 0) := (others => '0');
-		  
+--		  -- ponte-H
+		  LEDs      : out  std_logic_vector(LEN downto 0) := (others=>'0');
+		  timer     : in  integer := 9999999;
+		  timed_out : out std_logic := '0';
+
+
         -- Avalion Memmory Mapped Slave
         avs_address     : in  std_logic_vector(3 downto 0)  := (others => '0'); 
         avs_read        : in  std_logic                     := '0';             
@@ -39,6 +43,20 @@ begin
             end if;
         end if;
     end if;
+  end process;
+  
+  process(clk)
+		variable counter : integer := 0;
+  begin
+  if (rising_edge(clk)) then
+		if (counter < timer) then
+			counter := counter + 1;
+			timed_out <= '0';
+		else
+			counter := 0;
+			timed_out <= '1';
+		end if;
+	end if;
   end process;
 
 end rtl;

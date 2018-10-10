@@ -1,5 +1,5 @@
 Analysis & Synthesis report for aula02
-Tue Oct  9 07:45:42 2018
+Wed Oct 10 19:17:53 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -198,7 +198,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct  9 07:45:42 2018       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 10 19:17:53 2018       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; aula02                                      ;
 ; Top-level Entity Name           ; topLevel                                    ;
@@ -4112,7 +4112,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -4122,7 +4122,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Tue Oct  9 07:45:12 2018
+    Info: Processing started: Wed Oct 10 19:17:20 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off aula02 -c aula02
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file niosHello/synthesis/niosHello.vhd
@@ -4234,7 +4234,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file topLeve
     Info (12022): Found design unit 1: topLevel-rtl File: /home/parallels/Documents/EmbarcadosAvancados/motor_dc/topLevel.vhd Line: 17
     Info (12023): Found entity 1: topLevel File: /home/parallels/Documents/EmbarcadosAvancados/motor_dc/topLevel.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file IP/peripheral_LED.vhd
-    Info (12022): Found design unit 1: peripheral_LED-rtl File: /home/parallels/Documents/EmbarcadosAvancados/motor_dc/IP/peripheral_LED.vhd Line: 29
+    Info (12022): Found design unit 1: peripheral_LED-rtl File: /home/parallels/Documents/EmbarcadosAvancados/motor_dc/IP/peripheral_LED.vhd Line: 32
     Info (12023): Found entity 1: peripheral_LED File: /home/parallels/Documents/EmbarcadosAvancados/motor_dc/IP/peripheral_LED.vhd Line: 7
 Info (12127): Elaborating entity "topLevel" for the top level hierarchy
 Info (12128): Elaborating entity "niosHello" for hierarchy "niosHello:u0" File: /home/parallels/Documents/EmbarcadosAvancados/motor_dc/topLevel.vhd Line: 29
@@ -4453,7 +4453,7 @@ Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "niosHe
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "niosHello:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: /home/parallels/Documents/EmbarcadosAvancados/motor_dc/niosHello/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "niosHello:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: /home/parallels/Documents/EmbarcadosAvancados/motor_dc/niosHello/synthesis/submodules/altera_reset_controller.v Line: 220
 Info (11170): Start IP generation for the debug fabric within sld_hub.
-Info (11172): 2018.10.09.03:45:30 Progress: Loading slda01e70c1/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2018.10.10.15:17:40 Progress: Loading slda01e70c1/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -4489,9 +4489,9 @@ Info (21057): Implemented 2009 device resources after synthesis - the final reso
     Info (21064): Implemented 368 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 1448 megabytes
-    Info: Processing ended: Tue Oct  9 07:45:42 2018
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:39
+    Info: Processing ended: Wed Oct 10 19:17:53 2018
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:42
 
 
 +------------------------------------------+

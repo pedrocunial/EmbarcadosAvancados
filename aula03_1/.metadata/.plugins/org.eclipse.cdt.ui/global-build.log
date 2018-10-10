@@ -919,3 +919,455 @@ Info:              123 KBytes free for stack + heap.
 Info: Creating PonteH.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
 [PonteH build complete]
+14:24:17 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Compiling hello_world.c to obj/default/hello_world.o
+Info: Building ../PonteH_bsp/
+make --no-print-directory -C ../PonteH_bsp/
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:44:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:55:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:65:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(PIO_1_IRQ, edge_capture_ptr,
+  ^
+hello_world.c: In function 'main':
+hello_world.c:95:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000); // remover durante a simulação
+           ^
+hello_world.c:76:17: warning: unused variable 'p_but' [-Wunused-variable]
+   unsigned int *p_but = (unsigned int *) PIO_1_BASE;
+                 ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:57:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:67:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+hello_world.c: In function 'hbridge_init':
+hello_world.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+[BSP build complete]
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]
+14:27:30 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+make --no-print-directory -C ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:44:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:55:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:71:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(PIO_1_IRQ, edge_capture_ptr,
+[BSP build complete]
+  ^
+hello_world.c: In function 'main':
+hello_world.c:103:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000); // remover durante a simulação
+           ^
+hello_world.c:84:17: warning: unused variable 'p_but' [-Wunused-variable]
+   unsigned int *p_but = (unsigned int *) PIO_1_BASE;
+                 ^
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]
+14:37:47 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+make --no-print-directory -C ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:56:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:68:15: error: 'dc' undeclared (first use in this function)
+  duty_cycle = dc
+[BSP build complete]
+               ^
+hello_world.c:68:15: note: each undeclared identifier is reported only once for each function it appears in
+hello_world.c:69:1: error: expected ';' before '}' token
+ }
+ ^
+Makefile:775: recipe for target 'obj/default/hello_world.o' failed
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:76:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(p_but, edge_capture_ptr,
+  ^
+In file included from hello_world.c:18:0:
+hello_world.c: In function 'main':
+../PonteH_bsp/system.h:286:20: warning: passing argument 3 of 'hbridge_init' makes pointer from integer without a cast [-Wint-conversion]
+ #define PIO_1_BASE 0x61020
+                    ^
+hello_world.c:93:23: note: in expansion of macro 'PIO_1_BASE'
+   hbridge_init(10, 0, PIO_1_BASE);
+                       ^
+hello_world.c:81:5: note: expected 'unsigned int *' but argument is of type 'int'
+ int hbridge_init(unsigned dc, char rev, unsigned *p_but) {
+     ^
+hello_world.c:108:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 << duty_cycle); // remover durante a simulação
+           ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+14:38:24 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+make --no-print-directory -C ../PonteH_bsp/
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:56:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:69:1: error: expected ';' before '}' token
+ }
+ ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:76:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(p_but, edge_capture_ptr,
+  ^
+In file included from hello_world.c:18:0:
+hello_world.c: In function 'main':
+../PonteH_bsp/system.h:286:20: warning: passing argument 3 of 'hbridge_init' makes pointer from integer without a cast [-Wint-conversion]
+ #define PIO_1_BASE 0x61020
+                    ^
+hello_world.c:93:23: note: in expansion of macro 'PIO_1_BASE'
+   hbridge_init(10, 0, PIO_1_BASE);
+                       ^
+hello_world.c:81:5: note: expected 'unsigned int *' but argument is of type 'int'
+ int hbridge_init(unsigned dc, char rev, unsigned *p_but) {
+     ^
+hello_world.c:108:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 << duty_cycle); // remover durante a simulação
+           ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Makefile:775: recipe for target 'obj/default/hello_world.o' failed
+make: *** [obj/default/hello_world.o] Error 1
+make: *** Waiting for unfinished jobs....
+[BSP build complete]
+14:38:34 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+make --no-print-directory -C ../PonteH_bsp/
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:56:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:76:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(p_but, edge_capture_ptr,
+  ^
+In file included from hello_world.c:18:0:
+hello_world.c: In function 'main':
+../PonteH_bsp/system.h:286:20: warning: passing argument 3 of 'hbridge_init' makes pointer from integer without a cast [-Wint-conversion]
+ #define PIO_1_BASE 0x61020
+                    ^
+hello_world.c:93:23: note: in expansion of macro 'PIO_1_BASE'
+   hbridge_init(10, 0, PIO_1_BASE);
+                       ^
+hello_world.c:81:5: note: expected 'unsigned int *' but argument is of type 'int'
+ int hbridge_init(unsigned dc, char rev, unsigned *p_but) {
+     ^
+hello_world.c:108:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 << duty_cycle); // remover durante a simulação
+           ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+[BSP build complete]
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]
+14:38:58 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+make --no-print-directory -C ../PonteH_bsp/
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:56:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:76:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(p_but, edge_capture_ptr,
+  ^
+[BSP build complete]
+In file included from hello_world.c:18:0:
+hello_world.c: In function 'main':
+../PonteH_bsp/system.h:286:20: warning: passing argument 3 of 'hbridge_init' makes pointer from integer without a cast [-Wint-conversion]
+ #define PIO_1_BASE 0x61020
+                    ^
+hello_world.c:93:23: note: in expansion of macro 'PIO_1_BASE'
+   hbridge_init(10, 0, PIO_1_BASE);
+                       ^
+hello_world.c:81:5: note: expected 'unsigned int *' but argument is of type 'int'
+ int hbridge_init(unsigned dc, char rev, unsigned *p_but) {
+     ^
+hello_world.c:108:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 >> duty_cycle); // remover durante a simulação
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+           ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]
+14:39:17 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+Info: Building ../PonteH_bsp/
+make --no-print-directory -C ../PonteH_bsp/
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:56:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:76:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(p_but, edge_capture_ptr,
+  ^
+In file included from hello_world.c:18:0:
+hello_world.c: In function 'main':
+../PonteH_bsp/system.h:286:20: warning: passing argument 3 of 'hbridge_init' makes pointer from integer without a cast [-Wint-conversion]
+ #define PIO_1_BASE 0x61020
+                    ^
+hello_world.c:93:22: note: in expansion of macro 'PIO_1_BASE'
+   hbridge_init(2, 0, PIO_1_BASE);
+                      ^
+hello_world.c:81:5: note: expected 'unsigned int *' but argument is of type 'int'
+ int hbridge_init(unsigned dc, char rev, unsigned *p_but) {
+     ^
+hello_world.c:108:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 >> duty_cycle); // remover durante a simulação
+           ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+[BSP build complete]
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]
+14:40:17 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+make --no-print-directory -C ../PonteH_bsp/
+[BSP build complete]
+[PonteH build complete]
+14:41:01 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+make --no-print-directory -C ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:56:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:76:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(p_but, edge_capture_ptr,
+  ^
+In file included from hello_world.c:18:0:
+hello_world.c: In function 'main':
+../PonteH_bsp/system.h:286:20: warning: passing argument 3 of 'hbridge_init' makes pointer from integer without a cast [-Wint-conversion]
+ #define PIO_1_BASE 0x61020
+                    ^
+hello_world.c:93:22: note: in expansion of macro 'PIO_1_BASE'
+   hbridge_init(2, 0, PIO_1_BASE);
+                      ^
+hello_world.c:81:5: note: expected 'unsigned int *' but argument is of type 'int'
+ int hbridge_init(unsigned dc, char rev, unsigned *p_but) {
+     ^
+hello_world.c:108:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 >> duty_cycle); // remover durante a simulação
+           ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+[BSP build complete]
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]
+14:41:26 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+make --no-print-directory -C ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+[BSP build complete]
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_disable_irq':
+hello_world.c:56:8: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  void *edge_capture_ptr = (void *) &edge_capture;
+        ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:76:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(p_but, edge_capture_ptr,
+  ^
+In file included from hello_world.c:18:0:
+hello_world.c: In function 'main':
+../PonteH_bsp/system.h:286:20: warning: passing argument 3 of 'hbridge_init' makes pointer from integer without a cast [-Wint-conversion]
+ #define PIO_1_BASE 0x61020
+                    ^
+hello_world.c:93:22: note: in expansion of macro 'PIO_1_BASE'
+   hbridge_init(1, 0, PIO_1_BASE);
+                      ^
+hello_world.c:81:5: note: expected 'unsigned int *' but argument is of type 'int'
+ int hbridge_init(unsigned dc, char rev, unsigned *p_but) {
+     ^
+hello_world.c:108:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 >> duty_cycle); // remover durante a simulação
+           ^
+hello_world.c: In function 'hbridge_write_duty_cycle':
+hello_world.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]
+14:44:38 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+make --no-print-directory -C ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:78:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(PIO_1_IRQ, edge_capture_ptr,
+  ^
+hello_world.c: In function 'main':
+hello_world.c:110:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 >> duty_cycle); // remover durante a simulação
+           ^
+[BSP build complete]
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]
+14:44:50 **** Incremental Build of configuration Nios II for project PonteH ****
+make -j2 all 
+Info: Building ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
+make --no-print-directory -C ../PonteH_bsp/
+nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'handle_button_interrupts':
+hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+  volatile int *edge_capture_ptr = (volatile int *) context;
+                ^
+hello_world.c: In function 'hbridge_enable_irq':
+hello_world.c:78:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(PIO_1_IRQ, edge_capture_ptr,
+  ^
+hello_world.c: In function 'main':
+hello_world.c:110:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 >> duty_cycle); // remover durante a simulação
+           ^
+[BSP build complete]
+Info: Linking PonteH.elf
+nios2-elf-g++  -T'../PonteH_bsp//linker.x' -msys-crt0='../PonteH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../PonteH_bsp/  -msmallc  -Wl,-Map=PonteH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o PonteH.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert PonteH.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosHello --quartus_project_dir "/home/parallels/Documents/EmbarcadosAvancados/aula03_1" --jdi ../..//output_files/aula02.jdi --sopcinfo /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH_bsp/../../niosHello.sopcinfo
+Info: (PonteH.elf) 10 KBytes program size (code + initialized data).
+Info:              123 KBytes free for stack + heap.
+Info: Creating PonteH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
+[PonteH build complete]

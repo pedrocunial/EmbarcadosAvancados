@@ -22,6 +22,7 @@
 #include "sys/alt_irq.h"
 
 char reversed;
+int duty_cycle;
 volatile int *edge_capture;
 volatile int *prev_state;
 
@@ -50,10 +51,27 @@ void handle_button_interrupts(void *context, alt_u32 id)
 	printf("hello from interrupt -- %d\n", reversed);
 }
 
+void handle_timeout_interrupts(void *context, alt_u32 id)
+{
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP();
+}
+
 int hbridge_disable_irq()
 {
-	void *edge_capture_ptr = (void *) &edge_capture;
 	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_1_BASE, 0x0);
+	return 0;
+}
+
+int hbridge_read_duty_cycle()
+{
+	return duty_cycle;
+}
+
+int hbridge_write_duty_cycle(int dt)
+{
+	if (dt < 0) return 1;
+	duty_cycle = dt;
+	return 0;
 }
 
 
@@ -64,20 +82,22 @@ int hbridge_enable_irq()
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE, 0x0);
 	alt_irq_register(PIO_1_IRQ, edge_capture_ptr,
 			handle_button_interrupts);
+	return 0;
 }
 
-int hbridge_init() {
+int hbridge_init(int dc, char rev) {
+	duty_cycle = dc;
+	reversed = rev;
 	hbridge_enable_irq();
+	return 0;
 }
 
 int main(void){
   int led = 0;
   unsigned int *p_led = (unsigned int *) PERIPHERAL_LED_0_BASE;
-  unsigned int *p_but = (unsigned int *) PIO_1_BASE;
 
   *prev_state = 0;
-  reversed = 0;
-  hbridge_init();
+  hbridge_init(2, 0);
 
 #ifndef SIM
   printf("Embarcados++ \n");
@@ -92,7 +112,7 @@ int main(void){
 		  else
 			  led--;
 #ifndef SIM
-          usleep(500000); // remover durante a simulação
+          usleep(500000 >> duty_cycle); // remover durante a simulação
 #endif
 	  }
 	  else{

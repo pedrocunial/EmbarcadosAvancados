@@ -9,7 +9,7 @@ entity topLevel is
         fpga_clk_50        : in  std_logic;             -- clock.clk
 		  
         -- I/Os
-        fpga_led_pio    : out std_logic_vector(3 downto 0);  -- ponte-H
+        fpga_led_pio       : out std_logic_vector(3 downto 0);  -- ponte-H
 		  fpga_but_pio       : in  std_logic_vector(4 downto 0)
 	);
 end entity topLevel;
