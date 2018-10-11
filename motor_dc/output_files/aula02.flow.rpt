@@ -1,5 +1,5 @@
 Flow report for aula02
-Wed Oct 10 19:20:41 2018
+Thu Oct 11 08:40:36 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 10 19:20:41 2018       ;
+; Flow Status                     ; Successful - Thu Oct 11 08:40:36 2018       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; aula02                                      ;
 ; Top-level Entity Name           ; topLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 807 / 41,910 ( 2 % )                        ;
-; Total registers                 ; 1000                                        ;
+; Logic utilization (in ALMs)     ; 936 / 41,910 ( 2 % )                        ;
+; Total registers                 ; 1177                                        ;
 ; Total pins                      ; 10 / 314 ( 3 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,065,408 / 5,662,720 ( 36 % )              ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/10/2018 19:17:21 ;
+; Start date & time ; 10/11/2018 08:37:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; aula02              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.153920984016944                                           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.153925785819352                                           ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                 ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                   ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --          ; eda_simulation ;
@@ -96,7 +96,7 @@ agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --          ; --             ;
 ; SLD_FILE                            ; niosHello/synthesis/niosHello.regmap                        ; --            ; --          ; --             ;
 ; SLD_FILE                            ; niosHello/synthesis/niosHello.debuginfo                     ; --            ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME niosHello HAS_SOPCINFO 1 GENERATION_ID 1537443480 ; --            ; niosHello   ; --             ;
+; SLD_INFO                            ; QSYS_NAME niosHello HAS_SOPCINFO 1 GENERATION_ID 1539257837 ; --            ; niosHello   ; --             ;
 ; SOPCINFO_FILE                       ; niosHello/synthesis/../../niosHello.sopcinfo                ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; topLevel                                                    ; aula02        ; --          ; --             ;
@@ -108,12 +108,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:30     ; 1.0                     ; 1448 MB             ; 00:00:39                           ;
-; Fitter                    ; 00:02:06     ; 1.0                     ; 2381 MB             ; 00:02:34                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 1270 MB             ; 00:00:10                           ;
-; TimeQuest Timing Analyzer ; 00:00:23     ; 1.0                     ; 1595 MB             ; 00:00:23                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 1443 MB             ; 00:00:03                           ;
-; Total                     ; 00:03:13     ; --                      ; --                  ; 00:03:49                           ;
+; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 1440 MB             ; 00:00:36                           ;
+; Fitter                    ; 00:01:51     ; 1.0                     ; 2376 MB             ; 00:02:17                           ;
+; Assembler                 ; 00:00:10     ; 1.0                     ; 1265 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:19     ; 1.0                     ; 1593 MB             ; 00:00:19                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 1440 MB             ; 00:00:03                           ;
+; Total                     ; 00:02:51     ; --                      ; --                  ; 00:03:24                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

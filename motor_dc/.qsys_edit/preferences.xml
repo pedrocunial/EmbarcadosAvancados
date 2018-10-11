@@ -8,8 +8,7 @@
    <name preferredWidth="186" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Basic Functions/Bridges and Adaptors,Library/Basic Functions,Library/Interface Protocols/Ethernet,Project,Library/Interface Protocols/Ethernet/Reference Design Components,Library,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Processors and Peripherals,Library/Interface Protocols,Library/Processors and Peripherals/Peripherals" />
+ <library expandedCategories="Library,Project" />
  <window width="1375" height="876" x="65" y="24" />
  <generation synthesis="VHDL" block_symbol_file="0" simulation="VHDL" />
  <hdlexample language="VHDL" />

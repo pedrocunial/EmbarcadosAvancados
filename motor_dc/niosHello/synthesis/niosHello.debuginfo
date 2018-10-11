@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="niosHello" kind="system" version="16.0" fabric="QSYS">
  <!-- Format version 16.0 211 (Future versions may contain additional information.) -->
- <!-- 2018.10.10.15:22:10 -->
+ <!-- 2018.10.11.04:37:23 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1539210122</value>
+  <value>1539257837</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -6133,6 +6133,14 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
+  <parameter name="FREQ">
+   <type>int</type>
+   <value>50000000</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -6645,7 +6653,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>LEDs</name>
     <direction>Output</direction>
-    <width>5</width>
+    <width>4</width>
     <role>name</role>
    </port>
   </interface>
@@ -6719,12 +6727,6 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <type>interrupt</type>
    <isStart>false</isStart>
-   <port>
-    <name>timed_out</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>irq</role>
-   </port>
   </interface>
  </module>
  <module name="pio_1" kind="altera_avalon_pio" version="16.0" path="pio_1">
@@ -12934,5 +12936,5 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <reportVersion>16.0 211</reportVersion>
- <uniqueIdentifier>001C429FA2F40000016660129A11</uniqueIdentifier>
+ <uniqueIdentifier>001C429FA2F40000016662EAAB7D</uniqueIdentifier>
 </EnsembleReport>

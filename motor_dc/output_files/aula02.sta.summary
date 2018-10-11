@@ -3,163 +3,163 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 100C Model Setup 'fpga_clk_50'
-Slack : 8.652
+Slack : 9.345
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Setup 'altera_reserved_tck'
-Slack : 11.403
+Slack : 10.732
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'altera_reserved_tck'
-Slack : 0.150
+Slack : 0.298
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'fpga_clk_50'
-Slack : 0.364
+Slack : 0.345
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Recovery 'fpga_clk_50'
-Slack : 14.557
+Slack : 13.782
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Recovery 'altera_reserved_tck'
-Slack : 15.108
+Slack : 14.922
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Removal 'fpga_clk_50'
-Slack : 0.991
+Slack : 1.106
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Removal 'altera_reserved_tck'
-Slack : 1.171
+Slack : 1.184
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'fpga_clk_50'
-Slack : 8.634
+Slack : 8.639
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.783
+Slack : 15.707
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Setup 'fpga_clk_50'
-Slack : 8.785
+Slack : 9.725
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Setup 'altera_reserved_tck'
-Slack : 11.585
+Slack : 10.960
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'altera_reserved_tck'
-Slack : 0.137
+Slack : 0.281
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'fpga_clk_50'
-Slack : 0.302
+Slack : 0.325
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Recovery 'fpga_clk_50'
-Slack : 14.737
+Slack : 14.129
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Recovery 'altera_reserved_tck'
-Slack : 15.200
+Slack : 14.982
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Removal 'fpga_clk_50'
-Slack : 0.899
+Slack : 0.995
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Removal 'altera_reserved_tck'
-Slack : 1.122
+Slack : 1.107
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'fpga_clk_50'
-Slack : 8.551
+Slack : 8.546
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.783
+Slack : 15.761
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Setup 'fpga_clk_50'
-Slack : 13.095
+Slack : 12.907
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Setup 'altera_reserved_tck'
-Slack : 13.999
+Slack : 13.553
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Hold 'altera_reserved_tck'
-Slack : 0.024
+Slack : 0.081
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Hold 'fpga_clk_50'
-Slack : 0.179
-TNS   : 0.000
-
-Type  : Fast 1100mV 100C Model Recovery 'altera_reserved_tck'
-Slack : 16.150
+Slack : 0.177
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Recovery 'fpga_clk_50'
-Slack : 16.723
+Slack : 15.920
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Recovery 'altera_reserved_tck'
+Slack : 15.995
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Removal 'altera_reserved_tck'
-Slack : 0.463
+Slack : 0.476
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Removal 'fpga_clk_50'
-Slack : 0.495
+Slack : 0.608
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'fpga_clk_50'
-Slack : 8.789
+Slack : 8.790
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.773
-TNS   : 0.000
-
-Type  : Fast 1100mV -40C Model Setup 'fpga_clk_50'
-Slack : 14.141
+Slack : 15.732
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Setup 'altera_reserved_tck'
-Slack : 14.452
+Slack : 14.106
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Setup 'fpga_clk_50'
+Slack : 14.383
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'altera_reserved_tck'
-Slack : 0.005
+Slack : 0.053
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'fpga_clk_50'
-Slack : 0.139
+Slack : 0.150
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Recovery 'altera_reserved_tck'
-Slack : 16.246
+Slack : 16.115
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Recovery 'fpga_clk_50'
-Slack : 17.265
-TNS   : 0.000
-
-Type  : Fast 1100mV -40C Model Removal 'fpga_clk_50'
-Slack : 0.377
+Slack : 16.709
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Removal 'altera_reserved_tck'
-Slack : 0.378
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Removal 'fpga_clk_50'
+Slack : 0.468
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'fpga_clk_50'
-Slack : 8.778
+Slack : 8.779
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.806
+Slack : 15.786
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -10,7 +10,7 @@ entity niosHello is
 	port (
 		butaos_export : in  std_logic_vector(4 downto 0) := (others => '0'); -- butaos.export
 		clk_clk       : in  std_logic                    := '0';             --    clk.clk
-		leds_1_name   : out std_logic_vector(4 downto 0);                    -- leds_1.name
+		leds_1_name   : out std_logic_vector(3 downto 0);                    -- leds_1.name
 		reset_reset_n : in  std_logic                    := '0'              --  reset.reset_n
 	);
 end entity niosHello;
@@ -94,7 +94,8 @@ architecture rtl of niosHello is
 
 	component peripheral_LED is
 		generic (
-			LEN : natural := 4
+			LEN  : natural := 4;
+			FREQ : integer := 50000000
 		);
 		port (
 			clk           : in  std_logic                     := 'X';             -- clk
@@ -104,8 +105,7 @@ architecture rtl of niosHello is
 			avs_readdata  : out std_logic_vector(31 downto 0);                    -- readdata
 			avs_write     : in  std_logic                     := 'X';             -- write
 			avs_writedata : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			LEDs          : out std_logic_vector(4 downto 0);                     -- name
-			timed_out     : out std_logic                                         -- irq
+			LEDs          : out std_logic_vector(3 downto 0)                      -- name
 		);
 	end component peripheral_LED;
 
@@ -309,7 +309,6 @@ architecture rtl of niosHello is
 	signal mm_interconnect_0_onchip_memory2_1_s1_write                     : std_logic;                     -- mm_interconnect_0:onchip_memory2_1_s1_write -> onchip_memory2_1:write
 	signal mm_interconnect_0_onchip_memory2_1_s1_writedata                 : std_logic_vector(31 downto 0); -- mm_interconnect_0:onchip_memory2_1_s1_writedata -> onchip_memory2_1:writedata
 	signal mm_interconnect_0_onchip_memory2_1_s1_clken                     : std_logic;                     -- mm_interconnect_0:onchip_memory2_1_s1_clken -> onchip_memory2_1:clken
-	signal irq_mapper_receiver0_irq                                        : std_logic;                     -- peripheral_LED_0:timed_out -> irq_mapper:receiver0_irq
 	signal irq_mapper_receiver1_irq                                        : std_logic;                     -- pio_1:irq -> irq_mapper:receiver1_irq
 	signal irq_mapper_receiver2_irq                                        : std_logic;                     -- jtag_uart_0:av_irq -> irq_mapper:receiver2_irq
 	signal nios2_gen2_0_irq_irq                                            : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2_gen2_0:irq
@@ -397,18 +396,18 @@ begin
 
 	peripheral_led_0 : component peripheral_LED
 		generic map (
-			LEN => 4
+			LEN  => 4,
+			FREQ => 50000000
 		)
 		port map (
-			clk           => clk_clk,                                                     --            clock.clk
-			reset         => rst_controller_reset_out_reset,                              --            reset.reset
-			avs_address   => mm_interconnect_0_peripheral_led_0_avalon_slave_0_address,   --   avalon_slave_0.address
-			avs_read      => mm_interconnect_0_peripheral_led_0_avalon_slave_0_read,      --                 .read
-			avs_readdata  => mm_interconnect_0_peripheral_led_0_avalon_slave_0_readdata,  --                 .readdata
-			avs_write     => mm_interconnect_0_peripheral_led_0_avalon_slave_0_write,     --                 .write
-			avs_writedata => mm_interconnect_0_peripheral_led_0_avalon_slave_0_writedata, --                 .writedata
-			LEDs          => leds_1_name,                                                 --      conduit_end.name
-			timed_out     => irq_mapper_receiver0_irq                                     -- interrupt_sender.irq
+			clk           => clk_clk,                                                     --          clock.clk
+			reset         => rst_controller_reset_out_reset,                              --          reset.reset
+			avs_address   => mm_interconnect_0_peripheral_led_0_avalon_slave_0_address,   -- avalon_slave_0.address
+			avs_read      => mm_interconnect_0_peripheral_led_0_avalon_slave_0_read,      --               .read
+			avs_readdata  => mm_interconnect_0_peripheral_led_0_avalon_slave_0_readdata,  --               .readdata
+			avs_write     => mm_interconnect_0_peripheral_led_0_avalon_slave_0_write,     --               .write
+			avs_writedata => mm_interconnect_0_peripheral_led_0_avalon_slave_0_writedata, --               .writedata
+			LEDs          => leds_1_name                                                  --    conduit_end.name
 		);
 
 	pio_1 : component niosHello_pio_1
@@ -485,7 +484,7 @@ begin
 		port map (
 			clk           => clk_clk,                        --       clk.clk
 			reset         => rst_controller_reset_out_reset, -- clk_reset.reset
-			receiver0_irq => irq_mapper_receiver0_irq,       -- receiver0.irq
+			receiver0_irq => open,                           -- receiver0.irq
 			receiver1_irq => irq_mapper_receiver1_irq,       -- receiver1.irq
 			receiver2_irq => irq_mapper_receiver2_irq,       -- receiver2.irq
 			sender_irq    => nios2_gen2_0_irq_irq            --    sender.irq

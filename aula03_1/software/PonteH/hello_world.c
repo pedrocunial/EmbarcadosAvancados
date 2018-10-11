@@ -37,7 +37,10 @@ volatile int *prev_state;
 //int NAME_write_xxxxx( ..... );   // write data to xxxx device
 
 // LED Peripheral
-#define REG_DATA_OFFSET 1
+#define LEDS_DATA_OFFSET  (1 << 1)
+#define DUTY_CYCLE_OFFSET (1)
+#define TIMER_OFFSET      (1 << 2)
+
 
 void handle_button_interrupts(void *context, alt_u32 id)
 {
@@ -51,10 +54,6 @@ void handle_button_interrupts(void *context, alt_u32 id)
 	printf("hello from interrupt -- %d\n", reversed);
 }
 
-void handle_timeout_interrupts(void *context, alt_u32 id)
-{
-	IOWR_ALTERA_AVALON_PIO_EDGE_CAP();
-}
 
 int hbridge_disable_irq()
 {
@@ -85,8 +84,10 @@ int hbridge_enable_irq()
 	return 0;
 }
 
-int hbridge_init(int dc, char rev) {
-	duty_cycle = dc;
+int hbridge_init(int dc, int timer, char rev) {
+	unsigned *p_avalon = (unsigned *) PERIPHERAL_LED_0_BASE;
+	p_avalon[DUTY_CYCLE_OFFSET] = dc;
+	p_avalon[TIMER_OFFSET] = timer;
 	reversed = rev;
 	hbridge_enable_irq();
 	return 0;
@@ -94,10 +95,10 @@ int hbridge_init(int dc, char rev) {
 
 int main(void){
   int led = 0;
-  unsigned int *p_led = (unsigned int *) PERIPHERAL_LED_0_BASE;
+  unsigned int *p_avalon = (unsigned int *) PERIPHERAL_LED_0_BASE;
 
   *prev_state = 0;
-  hbridge_init(2, 0);
+  hbridge_init(500, 10, 0);
 
 #ifndef SIM
   printf("Embarcados++ \n");
@@ -105,14 +106,14 @@ int main(void){
 
   while(1){
 	  if (led < 4 && led > -1){
-		  *(p_led+REG_DATA_OFFSET) = (0x1 << led);
+		  *(p_avalon+LEDS_DATA_OFFSET) = (0x1 << led);
 		  printf("reversed: %d\n", reversed);
 		  if (reversed)
 			  led++;
 		  else
 			  led--;
 #ifndef SIM
-          usleep(500000 >> duty_cycle); // remover durante a simulação
+          usleep(500000 >> p_avalon[DUTY_CYCLE_OFFSET]); // remover durante a simulação
 #endif
 	  }
 	  else{

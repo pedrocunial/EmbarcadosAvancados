@@ -1,20 +1,20 @@
-14:44:50 **** Incremental Build of configuration Nios II for project PonteH ****
+04:55:34 **** Incremental Build of configuration Nios II for project PonteH ****
 make -j2 all 
 Info: Building ../PonteH_bsp/
-Info: Compiling hello_world.c to obj/default/hello_world.o
 make --no-print-directory -C ../PonteH_bsp/
+Info: Compiling hello_world.c to obj/default/hello_world.o
 nios2-elf-gcc -xc -MP -MMD -c -I../PonteH_bsp//HAL/inc -I../PonteH_bsp/ -I../PonteH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
 hello_world.c: In function 'handle_button_interrupts':
-hello_world.c:45:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
+hello_world.c:48:16: warning: unused variable 'edge_capture_ptr' [-Wunused-variable]
   volatile int *edge_capture_ptr = (volatile int *) context;
                 ^
 hello_world.c: In function 'hbridge_enable_irq':
-hello_world.c:78:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+hello_world.c:82:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
   alt_irq_register(PIO_1_IRQ, edge_capture_ptr,
   ^
 hello_world.c: In function 'main':
-hello_world.c:110:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-           usleep(500000 >> duty_cycle); // remover durante a simulação
+hello_world.c:116:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+           usleep(500000 >> p_avalon[DUTY_CYCLE_OFFSET]); // remover durante a simulação
            ^
 [BSP build complete]
 Info: Linking PonteH.elf
@@ -26,5 +26,5 @@ Info: Creating PonteH.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
 [PonteH build complete]
 
-14:44:51 Build Finished (took 477ms)
+04:55:34 Build Finished (took 500ms)
 

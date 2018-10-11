@@ -2,7 +2,7 @@ set_global_assignment -entity "niosHello" -library "niosHello" -name IP_TOOL_NAM
 set_global_assignment -entity "niosHello" -library "niosHello" -name IP_TOOL_VERSION "16.0"
 set_global_assignment -entity "niosHello" -library "niosHello" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "niosHello" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../niosHello.sopcinfo"]
-set_global_assignment -entity "niosHello" -library "niosHello" -name SLD_INFO "QSYS_NAME niosHello HAS_SOPCINFO 1 GENERATION_ID 1539210122"
+set_global_assignment -entity "niosHello" -library "niosHello" -name SLD_INFO "QSYS_NAME niosHello HAS_SOPCINFO 1 GENERATION_ID 1539257837"
 set_global_assignment -library "niosHello" -name MISC_FILE [file join $::quartus(qip_path) "../niosHello.cmp"]
 set_global_assignment -library "niosHello" -name SLD_FILE [file join $::quartus(qip_path) "niosHello.regmap"]
 set_global_assignment -library "niosHello" -name SLD_FILE [file join $::quartus(qip_path) "niosHello.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONEN
 set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUzOTIxMDEyMg==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUzOTI1NzgzNw==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRUJBNlUyM0k3::QXV0byBERVZJQ0U="
 set_global_assignment -entity "niosHello" -library "niosHello" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -651,6 +651,7 @@ set_global_assignment -entity "peripheral_LED" -library "niosHello" -name IP_COM
 set_global_assignment -entity "peripheral_LED" -library "niosHello" -name IP_COMPONENT_VERSION "MS4w"
 set_global_assignment -entity "peripheral_LED" -library "niosHello" -name IP_COMPONENT_DESCRIPTION "Y29udHJvbGUgZGUgbGVk"
 set_global_assignment -entity "peripheral_LED" -library "niosHello" -name IP_COMPONENT_PARAMETER "TEVO::NA==::TEVO"
+set_global_assignment -entity "peripheral_LED" -library "niosHello" -name IP_COMPONENT_PARAMETER "RlJFUQ==::NTAwMDAwMDA=::RlJFUQ=="
 set_global_assignment -entity "niosHello_onchip_memory2_1" -library "niosHello" -name IP_COMPONENT_NAME "bmlvc0hlbGxvX29uY2hpcF9tZW1vcnkyXzE="
 set_global_assignment -entity "niosHello_onchip_memory2_1" -library "niosHello" -name IP_COMPONENT_DISPLAY_NAME "T24tQ2hpcCBNZW1vcnkgKFJBTSBvciBST00p"
 set_global_assignment -entity "niosHello_onchip_memory2_1" -library "niosHello" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
