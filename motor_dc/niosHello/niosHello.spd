@@ -213,6 +213,8 @@
    type="VERILOG"
    library="jtag_uart_0" />
  <file path="simulation/niosHello.vhd" type="VHDL" />
+ <file path="simulation/nioshello_rst_controller.vhd" type="VHDL" />
+ <file path="simulation/nioshello_rst_controller_001.vhd" type="VHDL" />
  <topLevel name="niosHello" />
  <deviceFamily name="cyclonev" />
  <modelMap

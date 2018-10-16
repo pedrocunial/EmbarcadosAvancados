@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.0 211 linux 2018.10.11.04:37:17
+# ACDS 16.0 211 linux 2018.10.16.05:00:32
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -101,7 +101,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 16.0 211 linux 2018.10.11.04:37:17
+# ACDS 16.0 211 linux 2018.10.16.05:00:32
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="niosHello"
@@ -276,6 +276,8 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0.v"                                         -work nios2_gen2_0                                 -cdslib ./cds_libs/nios2_gen2_0.cds.lib                                
   ncvlog $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/niosHello_jtag_uart_0.v"                                          -work jtag_uart_0                                  -cdslib ./cds_libs/jtag_uart_0.cds.lib                                 
   ncvhdl -v93 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/niosHello.vhd"                                                                                                                                                                                         
+  ncvhdl -v93 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/nioshello_rst_controller.vhd"                                                                                                                                                                          
+  ncvhdl -v93 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/nioshello_rst_controller_001.vhd"                                                                                                                                                                      
 fi
 
 # ----------------------------------------

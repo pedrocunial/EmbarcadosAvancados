@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 0 152)
 		(output)
-		(text "leds_1_name[4..0]" (rect 0 0 74 12)(font "Arial" (font_size 8)))
-		(text "leds_1_name[4..0]" (rect 4 141 106 152)(font "Arial" (font_size 8)))
+		(text "leds_1_name[3..0]" (rect 0 0 73 12)(font "Arial" (font_size 8)))
+		(text "leds_1_name[3..0]" (rect 4 141 106 152)(font "Arial" (font_size 8)))
 		(line (pt 0 152)(pt 112 152)(line_width 3))
 	)
 	(drawing

@@ -5,6 +5,8 @@ set_global_assignment -library "lib_niosHello" -name SPD_FILE [file join $::quar
 set_global_assignment -library "lib_niosHello" -name MISC_FILE [file join $::quartus(sip_path) "../../niosHello.qsys"]
 
 set_global_assignment -library "lib_niosHello" -name MISC_FILE [file join $::quartus(sip_path) "niosHello.vhd"]
+set_global_assignment -library "lib_niosHello" -name MISC_FILE [file join $::quartus(sip_path) "nioshello_rst_controller.vhd"]
+set_global_assignment -library "lib_niosHello" -name MISC_FILE [file join $::quartus(sip_path) "nioshello_rst_controller_001.vhd"]
 set_global_assignment -library "lib_niosHello" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_reset_controller.v"]
 set_global_assignment -library "lib_niosHello" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_reset_synchronizer.v"]
 set_global_assignment -library "lib_niosHello" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_reset_controller.sdc"]

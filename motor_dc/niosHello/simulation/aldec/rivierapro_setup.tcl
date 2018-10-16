@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.0 211 linux 2018.10.11.04:37:17
+# ACDS 16.0 211 linux 2018.10.16.05:00:32
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -327,6 +327,8 @@ alias com {
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0.v"                                         -work nios2_gen2_0                                
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosHello_jtag_uart_0.v"                                          -work jtag_uart_0                                 
   eval  vcom $USER_DEFINED_COMPILE_OPTIONS       "$QSYS_SIMDIR/niosHello.vhd"                                                                                                                 
+  eval  vcom $USER_DEFINED_COMPILE_OPTIONS       "$QSYS_SIMDIR/nioshello_rst_controller.vhd"                                                                                                  
+  eval  vcom $USER_DEFINED_COMPILE_OPTIONS       "$QSYS_SIMDIR/nioshello_rst_controller_001.vhd"                                                                                              
 }
 
 # ----------------------------------------

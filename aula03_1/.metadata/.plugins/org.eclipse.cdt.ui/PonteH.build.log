@@ -1,4 +1,4 @@
-04:55:34 **** Incremental Build of configuration Nios II for project PonteH ****
+05:19:28 **** Incremental Build of configuration Nios II for project PonteH ****
 make -j2 all 
 Info: Building ../PonteH_bsp/
 make --no-print-directory -C ../PonteH_bsp/
@@ -9,11 +9,11 @@ hello_world.c:48:16: warning: unused variable 'edge_capture_ptr' [-Wunused-varia
   volatile int *edge_capture_ptr = (volatile int *) context;
                 ^
 hello_world.c: In function 'hbridge_enable_irq':
-hello_world.c:82:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+hello_world.c:79:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
   alt_irq_register(PIO_1_IRQ, edge_capture_ptr,
   ^
 hello_world.c: In function 'main':
-hello_world.c:116:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+hello_world.c:113:11: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
            usleep(500000 >> p_avalon[DUTY_CYCLE_OFFSET]); // remover durante a simulação
            ^
 [BSP build complete]
@@ -26,5 +26,5 @@ Info: Creating PonteH.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source PonteH.elf >PonteH.objdump
 [PonteH build complete]
 
-04:55:34 Build Finished (took 500ms)
+05:19:29 Build Finished (took 593ms)
 

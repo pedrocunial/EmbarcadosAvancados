@@ -17,7 +17,7 @@ entity peripheral_LED is
         -- I/Os
 --		  -- ponte-H
 		  LEDs      : out std_logic_vector(LEN-1 downto 0) := (others=>'0');
-		  pwm       : out std_logic := '0';
+		  pwm       : out std_logic := '1';
 
 
         -- Avalion Memmory Mapped Slave
@@ -42,6 +42,7 @@ architecture rtl of peripheral_LED is
   begin
     if (reset = '1' ) then
       s_leds <= (others => '0');
+		timed_out <= '0';
     elsif(rising_edge(clk)) then
 		if(avs_write = '1') then
 			if (avs_address = "0010") then
@@ -63,9 +64,9 @@ architecture rtl of peripheral_LED is
   begin
 	
 	if (rising_edge(clk)) then
-		if (count0 < 500) then
+		if (count0 < 5000) then
 			count0 := count0 + 1;
-		elsif (timed_out = '0') then
+		elsif (timed_out = timed_out) then -- test
 			count0 := 0;
 			count1 := count1 + 1;
 			if (count1 < duty_cycle) then

@@ -1,15 +1,17 @@
-# system info niosHello on 2018.10.11.04:37:16
+# system info niosHello on 2018.10.16.05:00:31
 system_info:
 name,value
 DEVICE,5CSEBA6U23I7
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1539257829
+GENERATION_ID,1539691222
 #
 #
-# Files generated for niosHello on 2018.10.11.04:37:16
+# Files generated for niosHello on 2018.10.16.05:00:31
 files:
 filepath,kind,attributes,module,is_top
 simulation/niosHello.vhd,VHDL,,niosHello,true
+simulation/nioshello_rst_controller.vhd,VHDL,,niosHello,false
+simulation/nioshello_rst_controller_001.vhd,VHDL,,niosHello,false
 simulation/submodules/niosHello_jtag_uart_0.v,VERILOG,,niosHello_jtag_uart_0,false
 simulation/submodules/niosHello_nios2_gen2_0.v,VERILOG,,niosHello_nios2_gen2_0,false
 simulation/submodules/niosHello_onchip_memory2_0.hex,HEX,,niosHello_onchip_memory2_0,false
@@ -135,3 +137,6 @@ niosHello.mm_interconnect_0.avalon_st_adapter_005,niosHello_mm_interconnect_0_av
 niosHello.mm_interconnect_0.avalon_st_adapter_005.error_adapter_0,niosHello_mm_interconnect_0_avalon_st_adapter_error_adapter_0
 niosHello.irq_mapper,niosHello_irq_mapper
 niosHello.rst_controller,altera_reset_controller
+niosHello.rst_controller_001,altera_reset_controller
+niosHello.rst_controller,altera_reset_controller
+niosHello.rst_controller_001,altera_reset_controller

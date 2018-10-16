@@ -7,6 +7,6 @@ module niosHello (
 
 	input	[4:0]	butaos_export;
 	input		clk_clk;
-	output	[4:0]	leds_1_name;
+	output	[3:0]	leds_1_name;
 	input		reset_reset_n;
 endmodule

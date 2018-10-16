@@ -428,6 +428,7 @@
    kind="peripheral_LED"
    version="1.0"
    enabled="1">
+  <parameter name="FREQ" value="50000000" />
   <parameter name="LEN" value="4" />
  </module>
  <module name="pio_0" kind="altera_avalon_pio" version="16.0" enabled="0">
@@ -624,6 +625,11 @@
    version="16.0"
    start="clk_0.clk_reset"
    end="onchip_memory2_1.reset1" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="nios2_gen2_0.debug_reset_request"
+   end="peripheral_LED_0.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

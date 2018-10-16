@@ -2,7 +2,7 @@
 		port (
 			butaos_export : in  std_logic_vector(4 downto 0) := (others => 'X'); -- export
 			clk_clk       : in  std_logic                    := 'X';             -- clk
-			leds_1_name   : out std_logic_vector(4 downto 0);                    -- name
+			leds_1_name   : out std_logic_vector(3 downto 0);                    -- name
 			reset_reset_n : in  std_logic                    := 'X'              -- reset_n
 		);
 	end component niosHello;

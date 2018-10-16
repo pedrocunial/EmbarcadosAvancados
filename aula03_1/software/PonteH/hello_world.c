@@ -46,10 +46,7 @@ void handle_button_interrupts(void *context, alt_u32 id)
 {
 
 	volatile int *edge_capture_ptr = (volatile int *) context;
-//	*edge_capture_ptr = IORD_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE);
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE, 0x0);
-//	*reversed = (*prev_state != *edge_capture_ptr) ?
-//			!*reversed : *reversed;
 	reversed = !reversed;
 	printf("hello from interrupt -- %d\n", reversed);
 }
@@ -86,7 +83,7 @@ int hbridge_enable_irq()
 
 int hbridge_init(int dc, int timer, char rev) {
 	unsigned *p_avalon = (unsigned *) PERIPHERAL_LED_0_BASE;
-	p_avalon[DUTY_CYCLE_OFFSET] = dc;
+//	p_avalon[DUTY_CYCLE_OFFSET] = dc;
 	p_avalon[TIMER_OFFSET] = timer;
 	reversed = rev;
 	hbridge_enable_irq();
@@ -98,7 +95,7 @@ int main(void){
   unsigned int *p_avalon = (unsigned int *) PERIPHERAL_LED_0_BASE;
 
   *prev_state = 0;
-  hbridge_init(500, 10, 0);
+  hbridge_init(0, 15, 0);
 
 #ifndef SIM
   printf("Embarcados++ \n");
