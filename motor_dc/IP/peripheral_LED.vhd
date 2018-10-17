@@ -30,7 +30,7 @@ entity peripheral_LED is
 end entity peripheral_LED;
 
 architecture rtl of peripheral_LED is
-	signal duty_cycle : integer := 800;
+	signal duty_cycle : integer range 0 to 5000 := 1020;
 	signal s_leds     : std_logic_vector(LEN-1 downto 0);
 	signal timed_out  : std_logic := '0';
 	signal timer      : integer := 0;
@@ -48,9 +48,9 @@ architecture rtl of peripheral_LED is
 			if (avs_address = "0010") then
 				s_leds <= avs_writedata(LEN-1 downto 0);
          elsif(avs_address = "0001") then                  -- REG_DATA
-            duty_cycle <= to_integer(signed(avs_writedata(9 downto 0)));
+            duty_cycle <= to_integer(unsigned(avs_writedata(31 downto 0)));
          elsif (avs_address = "0100") then
-				timer <= to_integer(signed(avs_writedata(31 downto 0)));
+				timer <= to_integer(unsigned(avs_writedata(31 downto 0)));
 			end if;
       end if;
     end if;
@@ -59,12 +59,12 @@ architecture rtl of peripheral_LED is
 
   
   process(clk)
-	variable count0 : integer := 0;
-	variable count1 : integer := 0;
+	variable count0 : integer range 0 to 1000 := 0;
+	variable count1 : integer range 0 to 1025 := 0;
   begin
 	
 	if (rising_edge(clk)) then
-		if (count0 < 500) then
+		if (count0 < 5) then
 			count0 := count0 + 1;
 		else
 	--	elsif (timed_out = timed_out) then -- test
@@ -72,11 +72,10 @@ architecture rtl of peripheral_LED is
 			count1 := count1 + 1;
 			if (count1 < duty_cycle) then
 				in_pwm <= '1';
-			elsif (count1 < 1024) then
+			elsif (count1 < 512) then
 				in_pwm <= '0';
 			else
 				count1 := 0;
-				in_pwm <= '1';
 			end if;
 	--	else
 	--		in_pwm <= '0';

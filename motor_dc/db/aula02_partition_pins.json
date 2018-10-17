@@ -4,87 +4,43 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LEDs[0]",
+					"name" : "fpga_led_pio[0]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDs[1]",
+					"name" : "fpga_led_pio[1]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDs[2]",
+					"name" : "fpga_led_pio[2]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDs[3]",
+					"name" : "fpga_led_pio[3]",
 					"strict" : false
 				},
 				{
-					"name" : "avs_writedata[0]",
+					"name" : "fpga_clk_50",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "fpga_but_pio[0]",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "fpga_but_pio[1]",
 					"strict" : false
 				},
 				{
-					"name" : "avs_address[0]",
+					"name" : "fpga_but_pio[4]",
 					"strict" : false
 				},
 				{
-					"name" : "avs_address[1]",
+					"name" : "fpga_but_pio[3]",
 					"strict" : false
 				},
 				{
-					"name" : "avs_address[2]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_address[3]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_write",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[1]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[2]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[3]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[9]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[8]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[4]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[7]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[6]",
-					"strict" : false
-				},
-				{
-					"name" : "avs_writedata[5]",
+					"name" : "fpga_but_pio[2]",
 					"strict" : false
 				}
 			]

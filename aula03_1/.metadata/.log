@@ -1673,3 +1673,641 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY com.altera.sbtgui.launch 1 0 2018-10-16 05:19:30.688
 !MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-3]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+!SESSION 2018-10-17 14:16:29.604 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/parallels/altera_lite/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/parallels/altera_lite/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2018-10-17 14:16:37.147
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-10-17 14:16:37.148
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2018-10-17 14:16:37.609
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-10-17 14:16:37.609
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:17:27.178
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:17:27.186
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2018-10-17 14:20:32.828 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/parallels/altera_lite/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/parallels/altera_lite/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2018-10-17 14:20:36.341
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-10-17 14:20:36.341
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2018-10-17 14:20:36.580
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-10-17 14:20:36.580
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+!SESSION 2018-10-17 14:26:56.708 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/parallels/altera_lite/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/parallels/altera_lite/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2018-10-17 14:27:40.951
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-10-17 14:27:40.951
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2018-10-17 14:27:41.363
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-10-17 14:27:41.363
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68b3979d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68b3979d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5fd31df7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5fd31df7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61d150af,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61d150af,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c8f65da,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c8f65da,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@587400a9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@587400a9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f0f92f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f0f92f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7430ed93,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7430ed93,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2346f77a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2346f77a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-17 14:27:57.894
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5bcfdaf3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5bcfdaf3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2018-10-17 14:29:41.898
+!MESSAGE Connecting to System Console on port 41245
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2018-10-17 14:29:42.061
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2018-10-17 14:29:42.061
+!MESSAGE return "16.0"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2018-10-17 14:29:42.061
+!MESSAGE package require systemconsole 16.0
+
+
+!ENTRY com.altera.sbt4e.systemconsole 1 1 2018-10-17 14:29:48.083
+!MESSAGE Complete response received
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2018-10-17 14:29:48.084
+!MESSAGE return "/designs/aula02.sof"
+
+!SUBENTRY 1 com.altera.sbt4e.systemconsole 1 1 2018-10-17 14:29:48.084
+!MESSAGE design_load {/home/parallels/Documents/EmbarcadosAvancados/aula03_1}
+
+
+!ENTRY com.altera.sbt4e.systemconsole 4 4 2018-10-17 14:29:48.085
+!MESSAGE There is no response in the queue waiting to be processed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:51:14.674
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:51:15.908
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:51:15.960
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:52:56.113
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:52:56.249
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:52:57.148
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:52:57.568
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:52:57.617
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:52:58.292
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:52:58.350
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:21.207
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:21.319
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:53:22.502
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:22.553
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:29.954
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:30.075
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:30.288
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:53:31.267
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:31.325
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:53:31.443
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:31.589
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:37.341
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:37.347
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:37.423
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:53:38.581
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:38.635
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:42.618
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:42.704
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:53:43.858
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:53:43.909
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:54:48.544
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:54:48.660
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:54:49.881
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:54:49.936
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:57:55.874
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:57:55.971
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:57:57.170
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:57:57.220
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:58:28.418
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:58:28.536
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:58:29.698
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:58:29.748
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:58:42.981
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:58:43.086
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:58:44.254
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:58:44.405
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:02.490
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:02.573
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:59:03.733
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:03.782
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:12.490
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:12.629
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:59:13.809
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:13.863
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:24.609
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:24.692
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 14:59:25.881
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 14:59:25.935
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:01:32.785
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:01:32.877
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:01:34.043
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:01:34.095
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:08.262
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:08.358
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:03:09.567
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:09.615
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:19.182
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:19.287
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:03:20.528
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:20.576
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:36.693
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:36.790
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:03:37.965
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:38.017
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:51.247
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:51.336
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:03:52.521
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:03:52.575
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:12.459
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:12.541
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:04:13.727
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:13.784
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:32.888
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:32.986
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:04:34.142
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:34.189
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:41.478
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:41.590
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:04:42.755
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:04:42.812
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:06:14.897
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:06:14.993
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:06:16.166
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:06:16.219
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:07:12.407
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:07:12.490
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:07:13.652
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:07:13.708
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:14:25.982
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:14:27.199
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:14:27.264
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:22:31.740
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:22:32.945
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:22:32.995
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:29:08.816
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:29:09.972
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:29:10.094
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:38:04.103
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:38:05.376
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:38:05.474
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:38:32.415
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:38:52.554
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:38:53.800
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:38:53.934
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:46:05.627
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:46:06.788
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:46:06.940
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:52:05.970
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:52:26.112
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:52:27.791
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:52:27.945
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:56:21.769
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-10-17 15:56:22.933
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [1-2]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-10-17 15:56:23.034
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=DE-SoC on localhost [1-2]' --device=2 --instance=0 --go --accept-bad-sysid --reset-target /home/parallels/Documents/EmbarcadosAvancados/aula03_1/software/PonteH/PonteH.elf]
