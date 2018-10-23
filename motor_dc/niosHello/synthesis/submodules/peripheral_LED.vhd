@@ -30,65 +30,79 @@ entity peripheral_LED is
 end entity peripheral_LED;
 
 architecture rtl of peripheral_LED is
-	signal duty_cycle : integer := 800;
-	signal s_leds     : std_logic_vector(LEN-1 downto 0);
-	signal timed_out  : std_logic := '0';
-	signal timer      : integer := 0;
-	signal large_pwm  : std_logic_vector(LEN-1 downto 0);
-	signal in_pwm     : std_logic := '0';
+	signal duty_cycle    : integer range 0 to 5000 := 1020;
+	signal s_leds        : std_logic_vector(LEN-1 downto 0);
+	signal timed_out     : std_logic := '0';
+	signal timer         : integer := 0;
+	signal timer_changed : std_logic := '1';
+	signal large_pwm     : std_logic_vector(LEN-1 downto 0);
+	signal in_pwm        : std_logic := '0';
  begin
 
   process(clk, reset)
   begin
     if (reset = '1' ) then
       s_leds <= (others => '0');
-		timed_out <= '0';
     elsif(rising_edge(clk)) then
 		if(avs_write = '1') then
 			if (avs_address = "0010") then
 				s_leds <= avs_writedata(LEN-1 downto 0);
          elsif(avs_address = "0001") then                  -- REG_DATA
-            duty_cycle <= to_integer(signed(avs_writedata(9 downto 0)));
+            duty_cycle <= to_integer(unsigned(avs_writedata(31 downto 0)));
          elsif (avs_address = "0100") then
-				timer <= to_integer(signed(avs_writedata(31 downto 0)));
+				timer <= to_integer(unsigned(avs_writedata(31 downto 0)));
+			end if;
+	
+		elsif(avs_read = '1') then
+			if (avs_address = "0010") then
+				avs_readdata(LEN-1 downto 0) <= s_leds;
+         elsif(avs_address = "0001") then                  -- REG_DATA
+            avs_readdata <= std_logic_vector(to_unsigned(duty_cycle,
+															avs_readdata'length));
+         elsif (avs_address = "0100") then
+				avs_readdata <= std_logic_vector(to_unsigned(timer,
+															avs_readdata'length));
 			end if;
       end if;
-    end if;
+
+	end if;
   end process;
   
 
   
   process(clk)
-	variable count0 : integer := 0;
-	variable count1 : integer := 0;
+	variable count0 : integer range 0 to 1000 := 0;
+	variable count1 : integer range 0 to 1025 := 0;
   begin
 	
 	if (rising_edge(clk)) then
-		if (count0 < 500) then
+		if (count0 < 5) then
 			count0 := count0 + 1;
-		else
-	--	elsif (timed_out = timed_out) then -- test
+		elsif (timed_out = '0') then -- test
 			count0 := 0;
 			count1 := count1 + 1;
 			if (count1 < duty_cycle) then
 				in_pwm <= '1';
-			elsif (count1 < 1024) then
+			elsif (count1 < 512) then
 				in_pwm <= '0';
 			else
 				count1 := 0;
-				in_pwm <= '1';
 			end if;
-	--	else
-	--		in_pwm <= '0';
+		else
+			in_pwm <= '0';
 		end if;
 	end if;
   end process;
 
-  process(clk)
+  process(clk, timer_changed, reset)
 	variable counter      : integer := 0;
 	variable time_counter : integer := 0;
   begin
-	  if (rising_edge(clk)) then
+	  if (timer_changed = '1' or reset = '1') then
+	      time_counter := 0;
+			timed_out <= '0';
+			timer_changed <= '0';
+	  elsif (rising_edge(clk)) then
 			if (counter < FREQ) then
 				counter := counter + 1;
 			else

@@ -25,6 +25,7 @@ char reversed;
 int duty_cycle;
 volatile int *edge_capture;
 volatile int *prev_state;
+volatile int *p_pio;
 
 //#define SIM
 
@@ -41,52 +42,66 @@ volatile int *prev_state;
 #define DUTY_CYCLE_OFFSET (1)
 #define TIMER_OFFSET      (1 << 2)
 
+#define DUTY_CYCLE_DEFAULT 0
+#define TIMER_DEFAULT      0
+#define LEDS_DATA_DEFAULT  0
+
 
 void handle_button_interrupts(void *context, alt_u32 id)
 {
-
+	volatile int *p_pio_base = (volatile int *) p_pio;
 	volatile int *edge_capture_ptr = (volatile int *) context;
-	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(p_pio_base, 0x0);
 	reversed = !reversed;
 	printf("hello from interrupt -- %d\n", reversed);
 }
 
 
-int hbridge_disable_irq()
+int hbridge_disable_irq(unsigned *p_pio)
 {
-	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_1_BASE, 0x0);
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(p_pio, 0x0);
 	return 0;
 }
 
-int hbridge_read_duty_cycle()
+int hbridge_read_duty_cycle(unsigned *p_pio)
 {
-	return duty_cycle;
+	return *(p_pio + DUTY_CYCLE_OFFSET);
 }
 
-int hbridge_write_duty_cycle(int dt)
+int hbridge_write_duty_cycle(unsigned *p_pio, unsigned dt)
 {
-	if (dt < 0) return 1;
-	duty_cycle = dt;
+
+	*(p_pio + DUTY_CYCLE_OFFSET) = dt;
 	return 0;
 }
 
 
-int hbridge_enable_irq()
+int hbridge_enable_irq(unsigned *p_pio_base, unsigned *p_pio_irq)
 {
+	p_pio = (volatile int*) p_pio_base;
 	void *edge_capture_ptr = (void *) &edge_capture;
-	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_1_BASE, 0xf);
-	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE, 0x0);
-	alt_irq_register(PIO_1_IRQ, edge_capture_ptr,
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(p_pio_base, 0xf);
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(p_pio_base, 0x0);
+	alt_irq_register(p_pio_irq, edge_capture_ptr,
 			handle_button_interrupts);
 	return 0;
 }
 
-int hbridge_init(int dc, int timer, char rev) {
-	unsigned *p_avalon = (unsigned *) PERIPHERAL_LED_0_BASE;
+int hbridge_halt(unsigned *p_avalon, unsigned *p_pio)
+{
+	*(p_avalon + DUTY_CYCLE_OFFSET) = DUTY_CYCLE_DEFAULT;
+	*(p_avalon + LEDS_DATA_OFFSET) = LEDS_DATA_DEFAULT;
+	*(p_avalon + TIMER_OFFSET) = TIMER_DEFAULT;
+
+	return 0;
+}
+
+int hbridge_init(unsigned *p_avalon, unsigned dc, unsigned timer, char rev,
+		unsigned leds, unsigned *p_pio_base, unsigned *p_pio_irq) {
 	*(p_avalon + DUTY_CYCLE_OFFSET) = dc;
 	*(p_avalon + TIMER_OFFSET) = timer;
+	*(p_avalon + LEDS_DATA_OFFSET) = leds;
 	reversed = rev;
-	hbridge_enable_irq();
 	return 0;
 }
 
@@ -95,33 +110,26 @@ int main(void){
   unsigned int *p_avalon = (unsigned int *) PERIPHERAL_LED_0_BASE;
 
   *prev_state = 0;
-  hbridge_init(300, 15, 0);
+  hbridge_init(p_avalon, 100, 15, 0, 15, PIO_1_BASE, PIO_1_IRQ);
+  hbridge_enable_irq(PIO_1_BASE, PIO_1_IRQ);
+
 
 #ifndef SIM
   printf("Embarcados++ \n");
 #endif
 
-  int dc = 0;
+  unsigned dc = 0;
   while(1) {
-	  hbridge_init(dc, 15, 0);
-	  if (led < 4 && led > -1){
-		  *(p_avalon+LEDS_DATA_OFFSET) = (0x1 );
-//		  printf("reversed: %d\n", reversed);
-		  if (reversed)
-			  led++;
-		  else
-			  led--;
-#ifndef SIM
-          usleep(1000000 >> p_avalon[DUTY_CYCLE_OFFSET]); // remover durante a simulação
-#endif
-	  }
-	  else{
-		  led = (led < 0) ? 3 : 0;
-	  }
-	  dc += 100;
-	  if (dc > 500) dc = 0;
 
-	  printf("%d\n", dc);
+#ifndef SIM
+          usleep(2000000); // remover durante a simulação
+#endif
+
+      dc += 25;
+	  if (dc > 255) dc = 0;
+	  hbridge_write_duty_cycle(p_avalon, dc);
+	  printf("%d\n", hbridge_read_duty_cycle(p_avalon));
+
   };
 
   return 0;

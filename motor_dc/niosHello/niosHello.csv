@@ -1,12 +1,12 @@
-# system info niosHello on 2018.10.17.14:40:52
+# system info niosHello on 2018.10.18.05:32:12
 system_info:
 name,value
 DEVICE,5CSEBA6U23I7
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1539812443
+GENERATION_ID,1539865924
 #
 #
-# Files generated for niosHello on 2018.10.17.14:40:52
+# Files generated for niosHello on 2018.10.18.05:32:12
 files:
 filepath,kind,attributes,module,is_top
 simulation/niosHello.vhd,VHDL,,niosHello,true
